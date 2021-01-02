@@ -37,6 +37,8 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   # Testing Environment
   gem 'rspec-rails', '~> 3.5'
+  # Assigs require following gem
+  gem 'rails-controller-testing'
 end
 
 

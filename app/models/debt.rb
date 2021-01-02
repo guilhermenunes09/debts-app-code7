@@ -1,6 +1,5 @@
 class Debt
   include Mongoid::Document
-  field :_id, type: String
   field :client, type: Integer
   field :reason, type: String
   field :when, type: Date
