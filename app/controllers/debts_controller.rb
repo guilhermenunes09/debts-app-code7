@@ -5,7 +5,7 @@ class DebtsController < ApplicationController
     end
 
     def show
-        @debt = Debt.where(_id: params).first
+        @debt = Debt.find(params)
         render json: @debt
     end
 
@@ -14,10 +14,19 @@ class DebtsController < ApplicationController
         if debt
             render json: { debt: debt }, status: 200
         else
-            render json: { 
-                errors: debt.errors.full_messages
-            }, status: 403
+            render json: { message: "Error" }, status: 422
         end
+    end
+
+    def update
+        debt = Debt.find(params)
+        
+        if debt.update(debt_params)
+            render json: { debt: debt }, status: 200
+        else
+            render json: { status: 422, debt: debt.errors.full_messages }, status: 422
+        end
+
     end
 
     private
