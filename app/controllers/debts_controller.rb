@@ -9,12 +9,17 @@ class DebtsController < ApplicationController
     end
 
     def create
-        debt = Debt.create! debt_params
-        if debt
-            render json: { debt: debt }, status: 200
-        else
-            render json: { message: "Error" }, status: 422
-        end
+        require 'json'
+        @debt = debt_params
+        @debt[:client] = JSON.parse(debt_params[:client])
+        
+        Debt.create! @debt
+        # debt = Debt.create! @debt
+        # if debt
+        #     render json: { debt: debt }, status: 200
+        # else
+        #     render json: { message: "Error" }, status: 422
+        # end
     end
 
     def update
