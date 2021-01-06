@@ -5,7 +5,7 @@ class Debt
   field :when, type: Date
   field :amount, type: Float
 
-  # validates :amount, presence: true, numericality: { only_float: true, greater_than: 0 }
-  # validates :when, presence: true
+  validates :amount, presence: true, numericality: { only_float: true, greater_than: 0 }
+  validates :when, presence: true
   
 end
