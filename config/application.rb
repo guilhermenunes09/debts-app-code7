@@ -18,8 +18,7 @@ require "action_cable/engine"
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
-require 'mongoid'
-Mongoid.load!(File.expand_path('mongoid.yml', './config'))
+
 
 module DebtsAppCode7
   class Application < Rails::Application
