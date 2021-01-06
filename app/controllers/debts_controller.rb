@@ -17,8 +17,9 @@ class DebtsController < ApplicationController
         #Verifiy if record doesn't exist, otherwise create a new 
         if @debt[:id] == 0 #CREATE
              @debt.delete(:id) # This allow Mongo to create it's own ID
-            if Debt.create! @debt
-                render json: { debt: @debt }, status: 200
+             create = Debt.create! @debt
+            if create
+                render json: { debt: create }, status: 200
                 return
             else
                 render json: { message: "Error" }, status: 422
@@ -35,8 +36,6 @@ class DebtsController < ApplicationController
                 return
             end
         end
-        
-
     end
 
     def update
