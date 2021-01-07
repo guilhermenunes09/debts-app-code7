@@ -1,24 +1,42 @@
-# README
+# LEIA-ME
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Para utilizar esta aplicação é necessário Rails v5+
 
-Things you may want to cover:
+Instale todas as gemas e dependências necessárias para rodar no servidor.
 
-* Ruby version
+Primeiro clone o projeto no terminal
 
-* System dependencies
+    $ git clone git@github.com:guilhermenunes09/debts-app-code7.git
+    $ cd debts-app-code7
 
-* Configuration
+    $ bundle install
 
-* Database creation
+## Instalando MongoDB
 
-* Database initialization
+Siga as orientações, de acordo com seus sistema e configuração:
+[https://docs.mongodb.com/guides/server/install/]
 
-* How to run the test suite
+Gerar as configurações padrões do MongoDB
+$ bin/rails g mongoid:config
 
-* Services (job queues, cache servers, search engines, etc.)
+Para mais detalhes em como instalar MongoDB e conectar ao Rails acesse:
+![https://docs.mongodb.com/mongoid/current/tutorials/getting-started-rails/]
 
-* Deployment instructions
+Inicie o servidor
+    $ rails server
 
-* ...
+## API
+
+    /api/debts
+    /api/debts/{id_do_cliente}
+
+Detalhes:
+[https://documenter.getpostman.com/view/5837874/TVzNHejF]
+
+## Interface do Usuário
+
+Para a Interface do usuário, siga as orientações em:
+[https://github.com/guilhermenunes09/debts-app-code7-react]
+
+
+guilhermewn09@gmail.com
