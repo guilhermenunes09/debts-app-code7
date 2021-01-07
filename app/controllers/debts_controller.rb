@@ -28,8 +28,9 @@ class DebtsController < ApplicationController
         else # UPDATE
             @update = Debt.find(@debt[:id])
             @debt.delete(:id)
-            if @update.update @debt
-                render json: { debt: @debt }, status: 200
+            update = @update.update @debt
+            if update
+                render json: { debt: update }, status: 200
                 return
             else
                 render json: { message: "Error" }, status: 422
