@@ -12,7 +12,9 @@ gem 'puma', '~> 3.11'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
+gem 'devise', '~> 4.7.3'
+
 gem 'rack-cors', :require => 'rack/cors'
 gem 'scout_apm'
 
@@ -23,7 +25,7 @@ gem 'scout_apm'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'mongoid', '~> 7.0.5'
-
+gem 'simple_token_authentication', '~> 1.0' # see semver.org
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 
