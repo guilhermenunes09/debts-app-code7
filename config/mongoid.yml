@@ -166,6 +166,7 @@ test:
 production:
   sessions:
     default:
-      database: debts_app_code7_production
-      hosts:
-        - mongodb+srv://guilhermenunes09:2yaXmAtELKGChanO@cluster0.woitw.mongodb.net/debts_app_code7_production?retryWrites=true&w=majority
+      uri: <%= ENV['MONGOHQ_URL'] %>
+      options:
+        skip_version_check: true 
+        safe: true
