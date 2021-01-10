@@ -33,7 +33,7 @@ class DebtsController < ApplicationController
             @debt.delete(:id)
             update = @update.update @debt
             if update
-                render json: { debt: update }, status: 200
+                render json: { debt: @update }, status: 200
                 return
             else
                 render json: { message: "Error" }, status: 422
