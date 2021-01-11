@@ -1,5 +1,11 @@
 # LEIA-ME
 
+## Demo
+
+https://debts-app-code7-react.herokuapp.com/
+
+## Instalação
+
 Para utilizar esta aplicação é necessário Rails v5+
 
 Instale todas as gemas e dependências necessárias para rodar no servidor.
