@@ -51,9 +51,12 @@ class DebtsController < ApplicationController
     end
 
     def destroy
+        puts "Check authorization"
         debt = Debt.find(params)
+        puts "Debt"
+        puts debt
         if debt.destroy!
-            render json: { debt: "Registro com id #{debt._id} destruido com sucesso!" }, status: 200
+            render json: { status: 200, debt: "Registro com id #{debt._id} destruido com sucesso!" }, status: 200
         else
             render json: { status: 422, debt: debt.errors.full_messages }, status: 422
         end
